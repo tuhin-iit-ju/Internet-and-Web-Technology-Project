@@ -1,0 +1,241 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+header {
+  background: #111;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:not(.login-btn):not(.signup-btn)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #f39c12;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:not(.login-btn):not(.signup-btn):hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+/* Buttons */
+.login-btn, .signup-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #f39c12;
+  color: #f39c12;
+}
+
+.login-btn:hover {
+  background: #f39c12;
+  color: #111;
+}
+
+.signup-btn {
+  background: #f39c12;
+  border: 1px solid #f39c12;
+  color: #111;
+}
+
+.signup-btn:hover {
+  background: #e67e22;
+  border-color: #e67e22;
+  color: #fff;
+}
+
+/* Welcome Section */
+.welcome {
+  text-align: center;
+  padding: 80px 20px 50px;
+}
+
+.welcome h1 {
+  font-size: 46px;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.welcome p {
+  font-size: 18px;
+  color: #bbb;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slides {
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+/* Info Overlay */
+.info {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: #fff;
+  max-width: 500px;
+}
+
+.info h2 {
+  font-size: 38px;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.buttons button {
+  background: #f39c12;
+  border: none;
+  padding: 10px 18px;
+  margin-right: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: #e67e22;
+}
+
+/* Controls */
+/* Controls */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  pointer-events: none; /* allow clicks only on arrows */
+}
+
+.controls span {
+  pointer-events: all; /* enable click */
+  font-size: 36px;
+  cursor: pointer;
+  color: #f39c12;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  padding: 12px 14px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.controls span:hover {
+  background: #f39c12;
+  color: #111;
+  transform: scale(1.1);
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1c1c1c;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #f39c12;
+}
+
+.social-icons a {
+  color: #ddd;
+  font-size: 26px;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+}

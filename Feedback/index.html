@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Movie Website</title>
+  <link rel="stylesheet" href="/Tuhin/Feedback/css/style.css">
+</head>
+<body>
+  <div class="feedback-container">
+    <h2>Give Us Your Feedback</h2>
+
+    <form id="feedbackForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" maxlength="250" required></textarea>
+      <small id="charCount">0/250</small>
+
+      <label for="rating">Rate us (1 to 5):</label>
+      <select id="rating" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <div class="btn-group">
+        <button type="submit">Submit</button>
+        <button type="button" id="mainPageBtn">Main Menu</button>
+      </div>
+    </form>
+
+    <p id="response"></p>
+  </div>
+
+  <script src="/Tuhin/Feedback/js/index.js"></script>
+</body>
+</html>
